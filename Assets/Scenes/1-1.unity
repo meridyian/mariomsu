@@ -2325,6 +2325,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2398,6 +2399,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873c43ae2acbd4999ab2a00080aaf51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &542695162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9464,6 +9477,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1492634976228602544, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4008667058865327560, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -9512,23 +9529,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mario
       objectReference: {fileID: 0}
+    - target: {fileID: 6528399208658215349, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
---- !u!1 &5004598732529237493 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6528399208658215349, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
-  m_PrefabInstance: {fileID: 5004598732529237492}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5004598732529237494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5004598732529237493}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 625f8a9866bbb4471b0555ad5bda11ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 8.01
