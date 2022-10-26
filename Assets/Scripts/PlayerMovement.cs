@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private new Rigidbody2D rigidbody;
+
+    public float moveSpeed = 8f;
+
+    private void Awake()
     {
-        
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
