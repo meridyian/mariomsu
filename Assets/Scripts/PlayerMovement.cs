@@ -11,7 +11,16 @@ public class PlayerMovement : MonoBehaviour
     private float inputAxis;
 
     public float moveSpeed = 8f;
-    
+    public float maxJumpHeight = 5f;
+    public float maxJumpTime = 1f;
+
+    public float jumpForce => (2f * maxJumpHeight) / (maxJumpTime / 2f);
+    public float gravity => (-2f * maxJumpHeight) / Mathf.Pow((maxJumpTime / 2f), 2);
+
+
+    public bool grounded { get; private set; } 
+    public bool jumping { get; private set; }
+
 
     private void Awake()
     {
@@ -39,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 leftEdge = camera.ScreenToWorldPoint(Vector2.zero);
         Vector2 rightEdge = camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        position.x = Mathf.Clamp(position.x, leftEdge.x, rightEdge.x);
+        position.x = Mathf.Clamp(position.x, leftEdge.x, rightEdge.x - 0.5f);
 
 
         rigidbody.MovePosition(position);
