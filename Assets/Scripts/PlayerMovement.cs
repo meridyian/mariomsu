@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
         ApplyGravity();
 
-
+       
 
         
     }
@@ -51,6 +51,18 @@ public class PlayerMovement : MonoBehaviour
     {
         inputAxis = Input.GetAxis("Horizontal");
         velocity.x = Mathf.MoveTowards(velocity.x, inputAxis*moveSpeed, moveSpeed * Time.deltaTime);
+
+
+        if (rigidbody.Raycast(Vector2.right * velocity.x)){
+            velocity.x = 0f;
+        }
+
+        if (velocity.x > 0f)
+        {
+            transform.eulerAngles = Vector3.zero;
+        } else if (velocity.x < 0f){
+            transform.eulerAngles = new Vector3(0f, 180f, 0f);
+        }
 
     }
 
@@ -92,10 +104,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+    // one time event
+
        if (collision.gameObject.layer != LayerMask.NameToLayer("PowerUp"))
        {
-            // velocity .y = 0f;
+            if (transform.DotTest(collision.transform, Vector2.up))
+            {
+                velocity.y = 0f;
+
+            }
 
        }
+
+
+
+
     }
 }
