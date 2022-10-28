@@ -42,7 +42,7 @@ public class EntityMovement : MonoBehaviour
     private void FixedUpdate()
     {
         velocity.x = direction.x * speed;
-        velocity.y += Physics2D.gravity.y;
+        velocity.y += Physics2D.gravity.y * Time.fixedDeltaTime ;
 
         rigidbody.MovePosition(rigidbody.position + velocity * Time.fixedDeltaTime);
 

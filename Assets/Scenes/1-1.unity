@@ -3497,6 +3497,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d819e2f75eeea5242b6de17737bb2268, type: 3}
   - {fileID: 21300000, guid: 35672984aa1fd894da6716da8832d93a, type: 3}
   framerate: 0.16666667
+--- !u!212 &685129605 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6468771737536647040, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
+  m_PrefabInstance: {fileID: 5004598732529237492}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &685829948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8514,7 +8519,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731347069}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 042a346b7dd5e4542adc3a6cf42131ad, type: 3}
   m_Name: 
@@ -10874,6 +10879,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2239921026303556757, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2239921026303556757, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
+      propertyPath: deadSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e9345d9e9a21949478e4292b904591cd, type: 3}
+    - target: {fileID: -2239921026303556757, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 685129605}
     - target: {fileID: 626250708934883431, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -10888,7 +10905,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: bfb02f37424e1504cb18192b8e445d43, type: 3}
     - target: {fileID: 1293903205173077899, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4008667058865327560, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
       propertyPath: m_RootOrder
@@ -10944,7 +10961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6879166316168708225, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6879166316168708225, guid: 1bc59039b14bb4e369da6e1d61cc2de1, type: 3}
       propertyPath: m_TagString
