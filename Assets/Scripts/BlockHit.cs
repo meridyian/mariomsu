@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class BlockHit : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int maxHits = -1;
+    public Sprite emptyBlock;
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (collision.transform.DotTest(transform, Vector2.up))
+            {
+
+            }
+        }
+    }
+    private void Hit()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        maxHits--;
+
+        if (maxHits == 0 )
+        {
+            spriteRenderer.sprite = emptyBlock;
+        }
+
+        StartCoroutine(Animate());
+    }
+    private IEnumerator Animate()
+    {
+
     }
 }
